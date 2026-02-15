@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitlife Unblocked Games — Play Free Browser Games Online</title>
+  <meta name="description" content="Play Bitlife and hundreds of unblocked browser games online. Fast search, favorites, categories, and instant launch with no downloads." />
+  <meta name="keywords" content="bitlife unblocked games, unblocked games, browser games, free online games, school games, instant play games" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="assets/img/icon/main.png" type="image/png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="canonical" href="https://bitlifeunblockedgames.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bitlife Unblocked Games — Play Free Browser Games" />
+  <meta property="og:description" content="Play Bitlife and many unblocked browser games online instantly with modern filters and favorites." />
+  <meta property="og:url" content="https://bitlifeunblockedgames.github.io/" />
+  <meta property="og:image" content="https://bitlifeunblockedgames.github.io/assets/img/icon/main.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bitlife Unblocked Games — Play Free Browser Games" />
+  <meta name="twitter:description" content="Play Bitlife and many free unblocked browser games instantly." />
+  <meta name="twitter:image" content="https://bitlifeunblockedgames.github.io/assets/img/icon/main.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Bitlife Unblocked Games",
+    "url": "https://bitlifeunblockedgames.github.io/",
+    "description": "Play Bitlife and free unblocked browser games with smart filters and instant launch.",
+    "inLanguage": "en-US"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #060913;
+      --surface: #0d1426;
+      --surface-2: #121b32;
+      --text: #f6f8ff;
+      --muted: #9ca7c9;
+      --primary: #67e8f9;
+      --accent: #818cf8;
+      --danger: #fb7185;
+      --ok: #34d399;
+      --border: #203055;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #1e3a8a55, transparent 60%),
+        radial-gradient(1000px 500px at 100% 0%, #0ea5e955, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .shell {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 16px;
+      height: calc(100vh - 32px);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #0f1730 0%, #0b1122 100%);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      overflow: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .nav-link {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #111a31;
+      transition: .2s ease;
+      font-size: .9rem;
+      margin-bottom: 8px;
+    }
+
+    .nav-link:hover { border-color: var(--primary); }
+
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: #111a31;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: .2s ease;
+      text-transform: capitalize;
+    }
+
+    .chip.active {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #05101f;
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mini-link {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 9px;
+      align-items: center;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: #111a31;
+      border-radius: 10px;
+      padding: 6px;
+      transition: .2s ease;
+    }
+
+    .mini-link:hover { border-color: var(--primary); }
+
+    .mini-link img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .mini-link span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.82rem;
+    }
+
+    .main {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .hero {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(140deg, #132247 0%, #121a30 45%, #1b1f46 100%);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr 180px 180px auto;
+      gap: 10px;
+    }
+
+    .input, .select, .toggle {
+      border: 1px solid var(--border);
+      background: #0e1730;
+      color: var(--text);
+      border-radius: 12px;
+      padding: 11px 12px;
+      font: inherit;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      font-size: .88rem;
+      justify-content: center;
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #0d152b;
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 10px;
+    }
+
+    .panel-head h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .row-scroll {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 190px;
+      gap: 10px;
+      overflow: auto;
+      padding-bottom: 4px;
+      align-items: start;
+    }
+
+    .row-scroll .game {
+      width: 190px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .game {
+      border: 1px solid var(--border);
+      background: #111b34;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: .2s ease;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      cursor: pointer;
+    }
+
+    .game:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+
+    .cover {
+      position: relative;
+      aspect-ratio: 1 / 1;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fav {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 1px solid #2c3d65;
+      background: #111a31ee;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .fav.active { color: var(--danger); border-color: var(--danger); }
+
+    .body {
+      padding: 10px;
+      display: grid;
+      gap: 6px;
+      min-height: 74px;
+      align-content: start;
+    }
+
+    .title {
+      font-size: .9rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tags {
+      color: var(--muted);
+      font-size: .75rem;
+      text-transform: capitalize;
+    }
+
+    .status {
+      display: inline-block;
+      width: fit-content;
+      font-size: .68rem;
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .status.buggy { background: #f59e0b22; color: #fbbf24; }
+    .status.broken { background: #ef444422; color: #f87171; }
+
+    .center {
+      text-align: center;
+      color: var(--muted);
+      padding: 14px;
+    }
+
+    .load-more {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #111b34;
+      color: var(--text);
+      border-radius: 12px;
+      padding: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .load-more:hover { border-color: var(--primary); }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 10px;
+      font-size: .84rem;
+    }
+
+    .footer a { color: var(--primary); text-decoration: none; }
+
+    @media (max-width: 1160px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; }
+      .toolbar { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .toolbar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/img/icon/main.png" alt="MK2" />
+        <div>
+          <h1>Bitlife Unblocked Games</h1>
+          <p>Instant browser gaming hub</p>
+        </div>
+      </div>
+
+      <div>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="privacy.html">Privacy</a>
+      </div>
+
+      <section>
+        <div class="meta" style="margin-bottom:8px">Categories</div>
+        <div id="tagChips" class="chip-list"></div>
+      </section>
+
+      <section>
+        <div class="meta" style="margin-bottom:8px">Quick picks</div>
+        <div id="quickList" class="mini-list"></div>
+      </section>
+
+      <section>
+        <div class="meta" style="margin-bottom:8px">Recently played</div>
+        <div id="recentMini" class="mini-list"></div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section class="hero">
+        <h2>Play Bitlife and discover unblocked games instantly</h2>
+        <p>Browse popular browser titles with smart filters, favorites, and zero-download instant launch.</p>
+        <div class="toolbar">
+          <input id="search" class="input" type="search" placeholder="Search game or tag..." />
+          <select id="sort" class="select">
+            <option value="name-asc">Sort: A → Z</option>
+            <option value="name-desc">Sort: Z → A</option>
+            <option value="recent">Sort: Recently played</option>
+          </select>
+          <button id="favoritesOnly" class="toggle">♡ Favorites only</button>
+          <label class="toggle"><input id="hideUnstable" type="checkbox" checked /> Hide buggy/broken</label>
+        </div>
+      </section>
+
+      <section class="panel" id="favoritesPanel" hidden>
+        <div class="panel-head">
+          <h3>Your favorites</h3>
+          <span id="favCount" class="meta">0 games</span>
+        </div>
+        <div id="favoritesGrid" class="row-scroll"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h3>All games</h3>
+          <span id="resultsMeta" class="meta">Loading...</span>
+        </div>
+        <div id="gamesGrid" class="grid"></div>
+        <div style="margin-top:10px">
+          <button id="loadMore" class="load-more">Load more</button>
+        </div>
+      </section>
+
+      <div class="footer">
+        © 2026 Bitlife Unblocked Games · <a href="privacy.html">Privacy</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const STORAGE_FAV = 'mk2_favorites';
+    const STORAGE_RECENT = 'mk2_recent';
+    const PAGE_SIZE = 36;
+
+    let allGames = [];
+    let visibleCount = 0;
+    let activeTag = 'all';
+    let favoritesOnly = false;
+
+    const el = {
+      search: document.getElementById('search'),
+      sort: document.getElementById('sort'),
+      hideUnstable: document.getElementById('hideUnstable'),
+      favoritesOnly: document.getElementById('favoritesOnly'),
+      gamesGrid: document.getElementById('gamesGrid'),
+      loadMore: document.getElementById('loadMore'),
+      resultsMeta: document.getElementById('resultsMeta'),
+      tagChips: document.getElementById('tagChips'),
+      quickList: document.getElementById('quickList'),
+      recentMini: document.getElementById('recentMini'),
+      favoritesPanel: document.getElementById('favoritesPanel'),
+      favoritesGrid: document.getElementById('favoritesGrid'),
+      favCount: document.getElementById('favCount')
+    };
+
+    function getFavs() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_FAV)) || []; }
+      catch { return []; }
+    }
+
+    function setFavs(next) {
+      localStorage.setItem(STORAGE_FAV, JSON.stringify(next));
+    }
+
+    function getRecent() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_RECENT)) || []; }
+      catch { return []; }
+    }
+
+    function addRecent(url) {
+      let recent = getRecent().filter((x) => x !== url);
+      recent.unshift(url);
+      recent = recent.slice(0, 12);
+      localStorage.setItem(STORAGE_RECENT, JSON.stringify(recent));
+    }
+
+    function gameThumb(game) {
+      return `https://ubghyper.github.io/GameList.github.io/${game.url}/${game.image}`;
+    }
+
+    function escapeHtml(text) {
+      return text
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function card(game, compact = false) {
+      const fav = getFavs().includes(game.url);
+      const tags = (game.tags || []).slice(0, 2).join(' · ') || 'Game';
+      const status = game.status ? `<span class="status ${game.status}">${game.status}</span>` : '';
+      return `
+        <article class="game" data-url="${game.url}">
+          <div class="cover" onclick="openGame('${encodeURIComponent(game.url)}')">
+            <img loading="lazy" src="${gameThumb(game)}" alt="${escapeHtml(game.name)}" onerror="this.src='assets/img/icon/main.png'" />
+            <button class="fav ${fav ? 'active' : ''}" onclick="toggleFav(event, '${encodeURIComponent(game.url)}')">❤</button>
+          </div>
+          <div class="body" onclick="openGame('${encodeURIComponent(game.url)}')">
+            <div class="title">${escapeHtml(game.name)}</div>
+            <div class="tags">${escapeHtml(tags)}</div>
+            ${status}
+          </div>
+        </article>
+      `;
+    }
+
+    function getFiltered() {
+      const q = el.search.value.trim().toLowerCase();
+      const sort = el.sort.value;
+      const hideUnstable = el.hideUnstable.checked;
+      const favSet = new Set(getFavs());
+      const recent = getRecent();
+
+      let list = [...allGames];
+
+      if (hideUnstable) list = list.filter((g) => !g.status);
+      if (activeTag !== 'all') list = list.filter((g) => (g.tags || []).includes(activeTag));
+      if (favoritesOnly) list = list.filter((g) => favSet.has(g.url));
+      if (q) {
+        list = list.filter((g) =>
+          g.name.toLowerCase().includes(q) ||
+          (g.tags || []).some((t) => t.toLowerCase().includes(q))
+        );
+      }
+
+      if (sort === 'name-asc') list.sort((a, b) => a.name.localeCompare(b.name));
+      if (sort === 'name-desc') list.sort((a, b) => b.name.localeCompare(a.name));
+      if (sort === 'recent') {
+        list.sort((a, b) => {
+          const ai = recent.indexOf(a.url);
+          const bi = recent.indexOf(b.url);
+          if (ai === -1 && bi === -1) return a.name.localeCompare(b.name);
+          if (ai === -1) return 1;
+          if (bi === -1) return -1;
+          return ai - bi;
+        });
+      }
+
+      return list;
+    }
+
+    function renderTags() {
+      const tagSet = new Set(['all']);
+      allGames.forEach((g) => (g.tags || []).forEach((t) => tagSet.add(t)));
+      const tags = [...tagSet];
+      el.tagChips.innerHTML = tags.map((t) => `
+        <button class="chip ${activeTag === t ? 'active' : ''}" onclick="setTag('${t}')">${t}</button>
+      `).join('');
+    }
+
+    function renderQuickLists() {
+      const stable = allGames.filter((g) => !g.status).slice(0, 8);
+      el.quickList.innerHTML = stable.map((g) => `
+        <a class="mini-link" href="play.html?game=${encodeURIComponent(g.url)}" onclick="recordRecent('${encodeURIComponent(g.url)}')">
+          <img src="${gameThumb(g)}" alt="${escapeHtml(g.name)}" onerror="this.src='assets/img/icon/main.png'" />
+          <span>${escapeHtml(g.name)}</span>
+        </a>
+      `).join('');
+
+      const recentGames = getRecent().map((u) => allGames.find((g) => g.url === u)).filter(Boolean).slice(0, 8);
+      if (!recentGames.length) {
+        el.recentMini.innerHTML = '<div class="center">No recent games yet</div>';
+      } else {
+        el.recentMini.innerHTML = recentGames.map((g) => `
+          <a class="mini-link" href="play.html?game=${encodeURIComponent(g.url)}" onclick="recordRecent('${encodeURIComponent(g.url)}')">
+            <img src="${gameThumb(g)}" alt="${escapeHtml(g.name)}" onerror="this.src='assets/img/icon/main.png'" />
+            <span>${escapeHtml(g.name)}</span>
+          </a>
+        `).join('');
+      }
+    }
+
+    function renderFavoritesPanel() {
+      const favs = getFavs();
+      const favGames = favs.map((u) => allGames.find((g) => g.url === u)).filter(Boolean);
+      el.favCount.textContent = `${favGames.length} game${favGames.length === 1 ? '' : 's'}`;
+      if (!favGames.length) {
+        el.favoritesPanel.hidden = true;
+        return;
+      }
+      el.favoritesPanel.hidden = false;
+      el.favoritesGrid.innerHTML = favGames.slice(0, 18).map((g) => card(g, true)).join('');
+    }
+
+    function renderGames(reset = false) {
+      const filtered = getFiltered();
+      if (reset) visibleCount = 0;
+      const slice = filtered.slice(0, visibleCount + PAGE_SIZE);
+      visibleCount = slice.length;
+
+      el.resultsMeta.textContent = `${filtered.length} result${filtered.length === 1 ? '' : 's'}`;
+
+      if (!slice.length) {
+        el.gamesGrid.innerHTML = '<div class="center">No games match your filters.</div>';
+      } else {
+        el.gamesGrid.innerHTML = slice.map((g) => card(g)).join('');
+      }
+
+      const done = visibleCount >= filtered.length;
+      el.loadMore.hidden = done || !filtered.length;
+      if (!done) {
+        el.loadMore.textContent = `Load more (${filtered.length - visibleCount} left)`;
+      }
+
+      renderFavoritesPanel();
+      renderQuickLists();
+    }
+
+    function setTag(tag) {
+      activeTag = tag;
+      renderTags();
+      renderGames(true);
+    }
+
+    function toggleFav(event, urlEncoded) {
+      event.stopPropagation();
+      const url = decodeURIComponent(urlEncoded);
+      let favs = getFavs();
+      if (favs.includes(url)) favs = favs.filter((x) => x !== url);
+      else favs.push(url);
+      setFavs(favs);
+      renderGames(false);
+    }
+
+    function recordRecent(urlEncoded) {
+      addRecent(decodeURIComponent(urlEncoded));
+    }
+
+    function openGame(urlEncoded) {
+      const url = decodeURIComponent(urlEncoded);
+      addRecent(url);
+      location.href = `play.html?game=${encodeURIComponent(url)}`;
+    }
+
+    async function init() {
+      try {
+        const res = await fetch('assets/games.json');
+        allGames = await res.json();
+        renderTags();
+        renderGames(true);
+      } catch (err) {
+        console.error(err);
+        el.gamesGrid.innerHTML = '<div class="center">Failed to load games.json</div>';
+      }
+    }
+
+    el.search.addEventListener('input', () => renderGames(true));
+    el.sort.addEventListener('change', () => renderGames(true));
+    el.hideUnstable.addEventListener('change', () => renderGames(true));
+    el.loadMore.addEventListener('click', () => renderGames(false));
+    el.favoritesOnly.addEventListener('click', () => {
+      favoritesOnly = !favoritesOnly;
+      el.favoritesOnly.textContent = favoritesOnly ? '✓ Favorites only' : '♡ Favorites only';
+      renderGames(true);
+    });
+
+    init();
+
+    window.setTag = setTag;
+    window.toggleFav = toggleFav;
+    window.openGame = openGame;
+    window.recordRecent = recordRecent;
+  </script>
+</body>
+</html>

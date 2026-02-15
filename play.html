@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Unblocked Game — Bitlife Unblocked Games</title>
+  <meta name="description" content="Play unblocked browser games instantly on Bitlife Unblocked Games with fullscreen mode, favorites, and recommended titles." />
+  <meta name="keywords" content="play unblocked games, bitlife game online, browser game player, free online games" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="assets/img/icon/main.png" type="image/png" />
+  <link rel="canonical" href="https://bitlifeunblockedgames.github.io/play.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Play Unblocked Game — Bitlife Unblocked Games" />
+  <meta property="og:description" content="Launch and play free browser games instantly." />
+  <meta property="og:url" content="https://bitlifeunblockedgames.github.io/play.html" />
+  <meta property="og:image" content="https://bitlifeunblockedgames.github.io/assets/img/icon/main.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050811;
+      --surface: #0f1529;
+      --surface-2: #101a32;
+      --text: #f6f8ff;
+      --muted: #9ca7c9;
+      --primary: #67e8f9;
+      --accent: #818cf8;
+      --danger: #fb7185;
+      --border: #223459;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background:
+        radial-gradient(900px 520px at 0% -10%, #1d4ed844, transparent 65%),
+        radial-gradient(800px 420px at 100% 0%, #0ea5e944, transparent 65%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .topbar {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #0c1326;
+      box-shadow: var(--shadow);
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .left img {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .left h1 {
+      margin: 0;
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 58vw;
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      border: 1px solid var(--border);
+      background: #121c36;
+      color: var(--text);
+      border-radius: 10px;
+      padding: 9px 11px;
+      font: inherit;
+      font-size: .86rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover { border-color: var(--primary); }
+    .btn.primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #061225; border: none; font-weight: 700; }
+    .btn.danger { border-color: #533046; color: #fecdd3; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 14px;
+    }
+
+    .frame-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #0d152b;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .frame-head {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .frame-head .meta {
+      color: var(--muted);
+      font-size: .84rem;
+      text-transform: capitalize;
+    }
+
+    .frame-box {
+      position: relative;
+      min-height: 68vh;
+      background: #0a1020;
+    }
+
+    iframe {
+      width: 100%;
+      height: 68vh;
+      border: none;
+      display: none;
+    }
+
+    .loading {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .loading strong { color: var(--text); display: block; margin-bottom: 8px; }
+
+    .sidebar {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      background: #0f1730;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 12px;
+    }
+
+    .card h2 { margin: 0 0 8px; font-size: .98rem; }
+
+    .desc {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .tags {
+      margin-top: 10px;
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--muted);
+      font-size: .72rem;
+      text-transform: capitalize;
+    }
+
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .rec {
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #111a31;
+    }
+
+    .rec img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .rec span {
+      display: block;
+      padding: 6px;
+      font-size: .75rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .frame-card.fullscreen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      border-radius: 0;
+      border: none;
+    }
+
+    .frame-card.fullscreen .frame-box,
+    .frame-card.fullscreen iframe {
+      height: calc(100vh - 58px);
+    }
+
+    @media (max-width: 1100px) {
+      .layout { grid-template-columns: 1fr; }
+      .rec-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .rec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .actions { justify-content: flex-start; }
+      .left h1 { max-width: 100%; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="left">
+        <img src="assets/img/icon/main.png" alt="MK2" />
+        <h1 id="pageTitle">Loading game...</h1>
+      </div>
+      <div class="actions">
+        <a class="btn" href="index.html">← Back</a>
+        <button id="favBtn" class="btn">♡ Favorite</button>
+        <button id="copyBtn" class="btn">Copy link</button>
+        <button id="refreshBtn" class="btn">Refresh</button>
+        <button id="fullscreenBtn" class="btn primary">Fullscreen</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section id="frameCard" class="frame-card">
+        <div class="frame-head">
+          <div class="meta" id="gameMeta">Preparing game...</div>
+          <button id="openDirect" class="btn">Open direct</button>
+        </div>
+        <div class="frame-box">
+          <div id="loading" class="loading">
+            <div>
+              <strong>Loading game...</strong>
+              <span>Large games may take a few seconds.</span>
+            </div>
+          </div>
+          <iframe id="frame" title="Game frame"></iframe>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="card">
+          <h2>About this game</h2>
+          <div id="desc" class="desc">Fetching details...</div>
+          <div id="tags" class="tags"></div>
+        </section>
+
+        <section class="card">
+          <h2>You might also like</h2>
+          <div id="recs" class="rec-grid"></div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_FAV = 'mk2_favorites';
+    const STORAGE_RECENT = 'mk2_recent';
+
+    const params = new URLSearchParams(location.search);
+    const gameUrl = params.get('game');
+
+    const el = {
+      pageTitle: document.getElementById('pageTitle'),
+      gameMeta: document.getElementById('gameMeta'),
+      desc: document.getElementById('desc'),
+      tags: document.getElementById('tags'),
+      recs: document.getElementById('recs'),
+      frame: document.getElementById('frame'),
+      loading: document.getElementById('loading'),
+      frameCard: document.getElementById('frameCard'),
+      favBtn: document.getElementById('favBtn'),
+      copyBtn: document.getElementById('copyBtn'),
+      refreshBtn: document.getElementById('refreshBtn'),
+      fullscreenBtn: document.getElementById('fullscreenBtn'),
+      openDirect: document.getElementById('openDirect')
+    };
+
+    let allGames = [];
+    let current = null;
+
+    function getFavs() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_FAV)) || []; }
+      catch { return []; }
+    }
+
+    function setFavs(next) {
+      localStorage.setItem(STORAGE_FAV, JSON.stringify(next));
+    }
+
+    function addRecent(url) {
+      let recent;
+      try { recent = JSON.parse(localStorage.getItem(STORAGE_RECENT)) || []; }
+      catch { recent = []; }
+      recent = recent.filter((x) => x !== url);
+      recent.unshift(url);
+      recent = recent.slice(0, 12);
+      localStorage.setItem(STORAGE_RECENT, JSON.stringify(recent));
+    }
+
+    function thumb(game) {
+      return `https://ubghyper.github.io/GameList.github.io/${game.url}/${game.image}`;
+    }
+
+    function setFavBtn() {
+      const isFav = getFavs().includes(current.url);
+      el.favBtn.textContent = isFav ? '❤ Favorited' : '♡ Favorite';
+      el.favBtn.classList.toggle('danger', isFav);
+    }
+
+    function showError(message) {
+      el.loading.innerHTML = `<div><strong>Unable to load</strong><span>${message}</span></div>`;
+      el.pageTitle.textContent = 'Game not found';
+      el.gameMeta.textContent = 'Try another game from the library';
+      el.desc.textContent = 'The requested game could not be found in assets/games.json.';
+      el.recs.innerHTML = '<a class="btn" href="index.html">Return to library</a>';
+    }
+
+    function renderRecs() {
+      const pool = allGames.filter((g) => g.url !== current.url && !g.status);
+      const tags = new Set(current.tags || []);
+      const related = pool
+        .filter((g) => (g.tags || []).some((t) => tags.has(t)))
+        .slice(0, 8);
+      const fill = pool.filter((g) => !related.includes(g)).slice(0, Math.max(0, 8 - related.length));
+      const final = [...related, ...fill];
+
+      el.recs.innerHTML = final.map((g) => `
+        <a class="rec" href="play.html?game=${encodeURIComponent(g.url)}">
+          <img src="${thumb(g)}" alt="${g.name}" loading="lazy" onerror="this.src='assets/img/icon/main.png'" />
+          <span>${g.name}</span>
+        </a>
+      `).join('');
+    }
+
+    async function init() {
+      if (!gameUrl) {
+        showError('Missing game parameter.');
+        return;
+      }
+
+      try {
+        const res = await fetch('assets/games.json');
+        allGames = await res.json();
+      } catch {
+        showError('Could not fetch game library.');
+        return;
+      }
+
+      current = allGames.find((g) => g.url === gameUrl);
+      if (!current) {
+        showError(`Game "${gameUrl}" was not found.`);
+        return;
+      }
+
+      addRecent(current.url);
+      document.title = `${current.name} — Bitlife Unblocked Games`;
+      el.pageTitle.textContent = current.name;
+      el.gameMeta.textContent = `${(current.tags || []).join(' · ') || 'Game'}${current.status ? ` · ${current.status}` : ''}`;
+      el.desc.textContent = current.gamedesc || 'No description available.';
+      el.tags.innerHTML = (current.tags || []).map((t) => `<span class="tag">${t}</span>`).join('');
+
+      const src = `https://ubghyper.github.io/GameList.github.io/${current.url}/`;
+      el.frame.src = src;
+      el.openDirect.onclick = () => window.open(src, '_blank', 'noopener');
+
+      el.frame.onload = () => {
+        el.loading.style.display = 'none';
+        el.frame.style.display = 'block';
+      };
+
+      renderRecs();
+      setFavBtn();
+
+      el.favBtn.onclick = () => {
+        let favs = getFavs();
+        if (favs.includes(current.url)) favs = favs.filter((x) => x !== current.url);
+        else favs.push(current.url);
+        setFavs(favs);
+        setFavBtn();
+      };
+
+      el.copyBtn.onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(location.href);
+          el.copyBtn.textContent = 'Copied!';
+          setTimeout(() => (el.copyBtn.textContent = 'Copy link'), 1100);
+        } catch {
+          alert(location.href);
+        }
+      };
+
+      el.refreshBtn.onclick = () => {
+        el.loading.style.display = 'grid';
+        el.frame.style.display = 'none';
+        el.frame.src = el.frame.src;
+      };
+
+      el.fullscreenBtn.onclick = async () => {
+        if (!document.fullscreenElement) {
+          await el.frameCard.requestFullscreen();
+          el.frameCard.classList.add('fullscreen');
+          el.fullscreenBtn.textContent = 'Exit fullscreen';
+        } else {
+          await document.exitFullscreen();
+          el.frameCard.classList.remove('fullscreen');
+          el.fullscreenBtn.textContent = 'Fullscreen';
+        }
+      };
+
+      document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+          el.frameCard.classList.remove('fullscreen');
+          el.fullscreenBtn.textContent = 'Fullscreen';
+        }
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>
